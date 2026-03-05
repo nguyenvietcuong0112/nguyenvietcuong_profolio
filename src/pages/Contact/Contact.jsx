@@ -129,106 +129,403 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.name ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                    )}
-                  </div>
+{/*             <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl"> */}
+{/*               <form onSubmit={handleSubmit} className="space-y-6"> */}
+{/*                 <div className="grid grid-cols-1 gap-6"> */}
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Your Name" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.name ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.name} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, name: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.name && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1">{errors.name}</p> */}
+{/*                     )} */}
+{/*                   </div> */}
 
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Your Email"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.email ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                    />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="email" */}
+{/*                       placeholder="Your Email" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.email ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.email} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, email: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.email && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.email} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
 
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.subject ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.subject}
-                      onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
-                      }
-                    />
-                    {errors.subject && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.subject}
-                      </p>
-                    )}
-                  </div>
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Subject" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.subject ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.subject} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, subject: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.subject && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.subject} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
 
-                  <div>
-                    <textarea
-                      placeholder="Your Message"
-                      rows="4"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.message ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors resize-none`}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                    ></textarea>
-                    {errors.message && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
+{/*                   <div> */}
+{/*                     <textarea */}
+{/*                       placeholder="Your Message" */}
+{/*                       rows="4" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.message ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors resize-none`} */}
+{/*                       value={formData.message} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, message: e.target.value }) */}
+{/*                       } */}
+{/*                     ></textarea> */}
+{/*                     {errors.message && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.message} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+{/*                 </div> */}
 
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
+{/*                 <button */}
+{/*                   type="submit" */}
+{/*                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity" */}
+{/*                 > */}
+{/*                   <span>Send Message</span> */}
+{/*                   <Send className="w-4 h-4" /> */}
+{/*                 </button> */}
+{/*               </form> */}
 
-              {/* Status Message */}
-              {status && (
-                <div
-                  className={`mt-4 text-center ${
-                    status.includes("success")
-                      ? "text-green-400"
-                      : "text-red-400"
-                  }`}
-                >
-                  <p>{status}</p>
-                </div>
-              )}
-            </div>
+{/*                */}{/* Status Message */}
+{/*               {status && ( */}
+{/*                 <div */}
+{/*                   className={`mt-4 text-center ${ */}
+{/*                     status.includes("success") */}
+{/*                       ? "text-green-400" */}
+{/*                       : "text-red-400" */}
+{/*                   }`} */}
+{/*                 > */}
+{/*                   <p>{status}</p> */}
+{/*                 </div> */}
+{/*               )} */}
+{/*             </div><div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl"> */}
+{/*               <form onSubmit={handleSubmit} className="space-y-6"> */}
+{/*                 <div className="grid grid-cols-1 gap-6"> */}
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Your Name" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.name ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.name} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, name: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.name && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1">{errors.name}</p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="email" */}
+{/*                       placeholder="Your Email" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.email ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.email} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, email: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.email && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.email} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Subject" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.subject ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.subject} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, subject: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.subject && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.subject} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <textarea */}
+{/*                       placeholder="Your Message" */}
+{/*                       rows="4" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.message ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors resize-none`} */}
+{/*                       value={formData.message} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, message: e.target.value }) */}
+{/*                       } */}
+{/*                     ></textarea> */}
+{/*                     {errors.message && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.message} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+{/*                 </div> */}
+
+{/*                 <button */}
+{/*                   type="submit" */}
+{/*                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity" */}
+{/*                 > */}
+{/*                   <span>Send Message</span> */}
+{/*                   <Send className="w-4 h-4" /> */}
+{/*                 </button> */}
+{/*               </form> */}
+
+{/*                */}{/* Status Message */}
+{/*               {status && ( */}
+{/*                 <div */}
+{/*                   className={`mt-4 text-center ${ */}
+{/*                     status.includes("success") */}
+{/*                       ? "text-green-400" */}
+{/*                       : "text-red-400" */}
+{/*                   }`} */}
+{/*                 > */}
+{/*                   <p>{status}</p> */}
+{/*                 </div> */}
+{/*               )} */}
+{/*             </div><div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl"> */}
+{/*               <form onSubmit={handleSubmit} className="space-y-6"> */}
+{/*                 <div className="grid grid-cols-1 gap-6"> */}
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Your Name" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.name ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.name} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, name: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.name && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1">{errors.name}</p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="email" */}
+{/*                       placeholder="Your Email" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.email ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.email} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, email: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.email && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.email} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Subject" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.subject ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.subject} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, subject: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.subject && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.subject} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <textarea */}
+{/*                       placeholder="Your Message" */}
+{/*                       rows="4" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.message ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors resize-none`} */}
+{/*                       value={formData.message} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, message: e.target.value }) */}
+{/*                       } */}
+{/*                     ></textarea> */}
+{/*                     {errors.message && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.message} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+{/*                 </div> */}
+
+{/*                 <button */}
+{/*                   type="submit" */}
+{/*                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity" */}
+{/*                 > */}
+{/*                   <span>Send Message</span> */}
+{/*                   <Send className="w-4 h-4" /> */}
+{/*                 </button> */}
+{/*               </form> */}
+
+{/*                */}{/* Status Message */}
+{/*               {status && ( */}
+{/*                 <div */}
+{/*                   className={`mt-4 text-center ${ */}
+{/*                     status.includes("success") */}
+{/*                       ? "text-green-400" */}
+{/*                       : "text-red-400" */}
+{/*                   }`} */}
+{/*                 > */}
+{/*                   <p>{status}</p> */}
+{/*                 </div> */}
+{/*               )} */}
+{/*             </div><div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl"> */}
+{/*               <form onSubmit={handleSubmit} className="space-y-6"> */}
+{/*                 <div className="grid grid-cols-1 gap-6"> */}
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Your Name" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.name ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.name} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, name: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.name && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1">{errors.name}</p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="email" */}
+{/*                       placeholder="Your Email" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.email ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.email} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, email: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.email && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.email} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <input */}
+{/*                       type="text" */}
+{/*                       placeholder="Subject" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.subject ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors`} */}
+{/*                       value={formData.subject} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, subject: e.target.value }) */}
+{/*                       } */}
+{/*                     /> */}
+{/*                     {errors.subject && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.subject} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+
+{/*                   <div> */}
+{/*                     <textarea */}
+{/*                       placeholder="Your Message" */}
+{/*                       rows="4" */}
+{/*                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${ */}
+{/*                         errors.message ? "border-red-500" : "border-gray-700" */}
+{/*                       } focus:border-blue-500 focus:outline-none transition-colors resize-none`} */}
+{/*                       value={formData.message} */}
+{/*                       onChange={(e) => */}
+{/*                         setFormData({ ...formData, message: e.target.value }) */}
+{/*                       } */}
+{/*                     ></textarea> */}
+{/*                     {errors.message && ( */}
+{/*                       <p className="text-red-500 text-sm mt-1"> */}
+{/*                         {errors.message} */}
+{/*                       </p> */}
+{/*                     )} */}
+{/*                   </div> */}
+{/*                 </div> */}
+
+{/*                 <button */}
+{/*                   type="submit" */}
+{/*                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity" */}
+{/*                 > */}
+{/*                   <span>Send Message</span> */}
+{/*                   <Send className="w-4 h-4" /> */}
+{/*                 </button> */}
+{/*               </form> */}
+
+{/*                */}{/* Status Message */}
+{/*               {status && ( */}
+{/*                 <div */}
+{/*                   className={`mt-4 text-center ${ */}
+{/*                     status.includes("success") */}
+{/*                       ? "text-green-400" */}
+{/*                       : "text-red-400" */}
+{/*                   }`} */}
+{/*                 > */}
+{/*                   <p>{status}</p> */}
+{/*                 </div> */}
+{/*               )} */}
+{/*             </div> */}
           </div>
         </div>
       </section>

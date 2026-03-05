@@ -12,6 +12,7 @@ import {
   FaLinux,
   FaFigma,
   FaAws,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -26,8 +27,11 @@ import {
   SiFirebase,
   SiVercel,
   SiVite,
+  SiFlutter,
+  SiAndroid,
+  SiMysql,
 } from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
+import { TbBrandVscode, TbApi } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
@@ -70,18 +74,22 @@ const SkillsSection = () => {
         icon: Code2,
         title: "Mobile Development",
         color: "text-blue-400",
-        skills: [
-          { name: "Flutter", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-          {
-            name: "Android",
-            icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-          },
-          {
-            name: "Java",
-            icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
-          },
-        ],
-      },
+      skills: [
+        {
+          name: "Flutter",
+          icon: <SiFlutter className="w-4 h-4 text-[#02569B]" />,
+        },
+        {
+          name: "React Native",
+          icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+        },
+        {
+          name: "Android",
+          icon: <SiAndroid className="w-4 h-4 text-[#3DDC84]" />,
+        },
+        { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
+      ],
+    },
     {
       icon: Code2,
       title: "FrontEnd Development",
@@ -107,29 +115,15 @@ const SkillsSection = () => {
       title: "BackEnd Development",
       color: "text-green-400",
       skills: [
-        {
-          name: "Node.js",
-          icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
-        },
-        {
-          name: "Python",
-          icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
-        },
+        { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
+        { name: "MySQL", icon: <SiMysql className="w-4 h-4 text-[#4479A1]" /> },
         {
           name: "PostgreSQL",
           icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
         },
         {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-        },
-        {
-          name: "REST APIs",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
-        },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+          name: "REST API",
+          icon: <TbApi className="w-4 h-4 text-[#FF6C37]" />,
         },
       ],
     },

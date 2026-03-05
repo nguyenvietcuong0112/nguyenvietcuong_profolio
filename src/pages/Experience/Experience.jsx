@@ -1,51 +1,87 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2, Briefcase, Calendar, Star, CheckCircle2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const ExperienceCard = ({
   title,
-  company,
   period,
-  description,
+  role,
+  functions,
+  specificWork,
+  technologies,
   icon: Icon,
 }) => (
-  <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-    {/* Glass morphism effect */}
-    <div className="absolute inset-0 backdrop-blur-lg bg-white/5 rounded-lg" />
+  <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+    {/* Glass morphism effect background */}
+    <div className="absolute inset-0 backdrop-blur-xl bg-gray-900/40 rounded-2xl border border-gray-800/50" />
 
-    {/* Animated gradient border */}
-    <div className="absolute -inset-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-100 animate-gradient-xy transition-all duration-500" />
+    {/* Animated gradient border accent */}
+    <div className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-purple-500/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-    <div className="relative bg-gray-900/90 rounded-lg p-8 h-full border border-gray-800/50 shadow-xl backdrop-blur-xl">
-      {/* Floating icon with pulse effect */}
-      <div className="relative mb-6">
-        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" />
-        <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
-      </div>
-
-      {/* Content with improved typography */}
-      <div className="space-y-3">
-        <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          {title}
-        </h3>
-        <div className="flex justify-between items-center text-gray-300">
-          <span className="font-semibold text-blue-400">{company}</span>
-          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full">
-            {period}
-          </span>
+    <div className="relative p-8 h-full flex flex-col">
+      {/* Header Info */}
+      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+        <div className="flex items-start gap-4">
+          <div className="relative mt-1">
+            <div className="absolute -inset-2 bg-cyan-500/20 rounded-lg blur-lg group-hover:bg-cyan-500/40 transition-colors duration-500" />
+            <Icon className="w-8 h-8 text-cyan-400 relative z-10" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+              {title}
+            </h3>
+            <div className="flex items-center gap-2 mt-2 text-cyan-400/80 font-medium">
+              <Briefcase className="w-4 h-4" />
+              <span>{role}</span>
+            </div>
+          </div>
         </div>
-        <p className="text-gray-300 border-l-4 border-blue-500/50 pl-4 mt-4 leading-relaxed">
-          {description}
-        </p>
+        <div className="flex items-center gap-2 text-sm font-mono text-gray-400 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700/50 whitespace-nowrap self-start">
+          <Calendar className="w-4 h-4 text-blue-400" />
+          {period}
+        </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-4 right-4 w-20 h-20">
-        <div className="absolute top-0 right-0 w-6 h-[2px] bg-cyan-500/50" />
-        <div className="absolute top-0 right-0 w-[2px] h-6 bg-cyan-500/50" />
+      {/* Project Functions */}
+      {functions && (
+        <div className="mb-6">
+          <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-2 flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-500" /> Functions
+          </p>
+          <p className="text-gray-200 leading-relaxed bg-blue-500/5 p-3 rounded-xl border border-blue-500/10">
+            {functions}
+          </p>
+        </div>
+      )}
+
+      {/* Specific Work - Responsibilities */}
+      <div className="flex-grow space-y-3 mb-8">
+        <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-2">
+          Specific Work
+        </p>
+        <ul className="space-y-3">
+          {specificWork.map((item, idx) => (
+            <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm group/item">
+              <CheckCircle2 className="w-4 h-4 text-blue-500 mt-0.5 shrink-0 group-hover/item:text-cyan-400 transition-colors" />
+              <span className="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="absolute bottom-4 left-4 w-20 h-20">
-        <div className="absolute bottom-0 left-0 w-6 h-[2px] bg-purple-500/50" />
-        <div className="absolute bottom-0 left-0 w-[2px] h-6 bg-purple-500/50" />
+
+      {/* Technologies */}
+      <div className="pt-6 border-t border-gray-800/50">
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech, idx) => (
+            <Badge
+              key={idx}
+              variant="outline"
+              className="bg-blue-500/5 hover:bg-blue-500/10 text-blue-300 border-blue-500/20 py-1 px-3 rounded-lg text-xs font-medium transition-all duration-300"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
       </div>
     </div>
   </div>
@@ -54,82 +90,126 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
-      description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
-    },
-    {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
-      description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
-    },
-    {
       icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
-      description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+      title: "Build multiple mobile apps with Flutter and Android",
+      period: "07/2023 - Now",
+      role: "Mobile Developer",
+      functions: "Data analytics and data aggregation platform",
+      specificWork: [
+        "Developed and maintained multiple mobile applications across productivity and utility domains",
+        "Implemented core features including Maps, Push Notifications, Home Widgets, and background services",
+        "Integrated Firebase services (Auth, Remote Config, FCM, Firestore, Analytics, Crashlytics)",
+        "Applied Modular & Clean Architecture with MVVM, Bloc, and Provider (Flutter)",
+        "Integrated RESTful APIs with secure data handling",
+        "Integrated Unity modules into Android and iOS applications",
+        "Implemented monetization strategies (Ad integration & optimization)",
+        "CI/CD: Bitbucket Pipelines, Automated Build & Deployment, Code Signing, Google Play Publishing",
+        "Published, maintained, and enhanced apps on Google Play Store and Apple App Store",
+      ],
+      technologies: ["Flutter", "Android Java", "Android Kotlin", "Swift"],
+    },
+    {
+      icon: Star,
+      title: "Viettel Data Mining Platform",
+      period: "01/2023 - 07/2023",
+      role: "Frontend Developer",
+      functions: "Data analytics and data aggregation platform",
+      specificWork: [
+        "Analyze requirements, operations, new features to create the right interface with customer requirements",
+        "Feature development for charts (Echart, ChartJs, D3Js)",
+        "Optimized interface",
+        "Support fixbug directly with customers",
+        "Maintain, develop new features based on the existing system",
+      ],
+      technologies: ["ReactJS"],
+    },
+    {
+      icon: Briefcase,
+      title: "ETAX MOBILE",
+      period: "06/2022 - 12/2022",
+      role: "Mobile Developer",
+      functions: "Pay tax, look up tax registration information, look up payable tax amount: GTGT, TNCN, LBTB ...",
+      specificWork: [
+        "Analysis of new requirements and operations from customers",
+        "Interface builder",
+        "Maintain, develop new features based on the existing system",
+        "Support fixbug directly with customers",
+        "Optimized interface",
+        "Build, release App to AppStore, Google Play",
+      ],
+      technologies: ["Flutter", "Java"],
+    },
+    {
+      icon: Book,
+      title: "Jasu",
+      period: "10/2021 - 05/2022",
+      role: "Mobile Developer",
+      functions: "Build a system of tutors and students with basic functions such as Login, Register, Create class, Register to teach, display class list...",
+      specificWork: [
+        "Analysis of requirements, business",
+        "System Design",
+        "Build interface for registration, login, class list display, class creation, API integration",
+        "Team Management",
+      ],
+      technologies: ["React Native", "Java"],
     },
   ];
 
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-[#04081A]" />
+    <main className="min-h-screen bg-[#04081A] relative overflow-hidden pt-32 pb-20">
+      {/* Grid Pattern Background */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
 
-        {/* Grid background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(50,50,70,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(50,50,70,0.15)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]" />
+      {/* Glow Effects */}
+      <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
 
-        {/* Animated particles */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-blue-500/20 rounded-full animate-float"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mb-20">
+          <h2 className="text-sm font-mono text-cyan-400 uppercase tracking-[0.3em] mb-4">
+            Professional History
+          </h2>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Journey</span>
+          </h1>
+          <p className="text-gray-400 text-lg leading-relaxed">
+            A chronological look at my professional growth and the projects that have shaped my career as a developer.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {experiences.map((exp, index) => (
+            <ExperienceCard key={index} {...exp} />
           ))}
         </div>
-
-        {/* Content container */}
-        <div className="relative container mx-auto px-6 mt-10">
-          {/* Section header with enhanced effects */}
-          <div className="flex flex-col items-center space-y-8 mb-20">
-            <div className="relative">
-              <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
-                Professional Journey
-              </h2>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
-            </div>
-
-          </div>
-
-          {/* Experience grid with improved layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-            {experiences.map((exp, index) => (
-              <ExperienceCard key={index} {...exp} />
-            ))}
-          </div>
-        </div>
-
-        {/* Enhanced background effects */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse delay-1000" />
       </div>
-    </>
+
+      <style jsx>{`
+        .bg-grid-pattern {
+          background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+          background-size: 40px 40px;
+        }
+      `}</style>
+    </main>
   );
 };
+
+// Simple Fallback for Book icon if Lucide doesn't have it in current version
+const Book = (props) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+  </svg>
+);
 
 export default ExperienceSection;
