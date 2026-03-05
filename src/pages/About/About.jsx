@@ -35,7 +35,7 @@ export default function About() {
               </p>
 
               <p className="text-white">
-                My work centers around Flutter and Android (Java/Kotlin), with a strong
+                My work centers around Flutter,Android (Java/Kotlin),React Native, with a strong
                 emphasis on scalability, performance, and maintainable code. I enjoy
                 transforming complex requirements into smooth, reliable mobile apps that
                 deliver real value to users.
