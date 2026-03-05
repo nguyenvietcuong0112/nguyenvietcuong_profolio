@@ -52,7 +52,7 @@ const profile = {
     name: 'Nguyen Viet Cuong',
     title: 'Mobile Developer',
     skills: [
-        'Flutter', 'Android', 'Java', 'ReactJS',
+        'Flutter', 'Android', React Native, 'Java', 'ReactJS',
     ],
     hardWorker: true,
     quickLearner: true,
