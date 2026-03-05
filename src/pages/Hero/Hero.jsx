@@ -44,6 +44,7 @@ export default function Hero() {
   const words = [
     "Mobile Developer",
     "Flutter Developer & Android Developer",
+    "React Native",
   ];
 
   const [code] = useState(`
