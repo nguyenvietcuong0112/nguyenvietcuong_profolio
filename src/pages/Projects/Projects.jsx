@@ -5,6 +5,24 @@ import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Walk Log – Pedometer Counter",
+    category: "company",
+    description:
+      "A sophisticated health and fitness application designed to monitor daily physical activity. Tracks steps, distance covered, calories burned, and active duration with personalized goal setting and detailed activity analytics.",
+    color: "#f59e0b",
+    githubLink: "#",
+    androidLink: "https://play.google.com/store/apps/details?id=com.pedometer.steptracker.runwalk.dailytrack",
+  },
+  {
+    title: "Money Tracker: Budget Manager",
+    category: "personal",
+    description:
+      "A personal finance tool designed to help users track daily expenses and understand their spending habits through a simple, clear, and intuitive interface. Features include multi-wallet management and detailed transaction history.",
+    color: "#22c55e",
+    githubLink: "#",
+    iosLink: "https://apps.apple.com/us/app/money-tracker-budget-manager/id6757209828",
+  },
+  {
     title: "ETAX MOBILE",
     category: "company",
     description:
@@ -32,12 +50,13 @@ const projects = [
     githubLink: "#",
   },
   {
-    title: "Jasu (Tutor Connection App)",
+    title: "App Lock – Protect Privacy",
     category: "personal",
     description:
-      "An innovative platform connecting tutors and students, featuring real-time class registration, tutor profiles, and a streamlined educational management system.",
-    color: "#60a5fa",
+      "A professional privacy-focused application designed to safeguard personal data by locking sensitive apps with a secure PIN. Features a streamlined interface, multimedia protection for galleries, and real-time security overlays.",
+    color: "#3b82f6",
     githubLink: "#",
+    androidLink: "https://play.google.com/store/apps/details?id=com.app.lockit.smartlock",
   },
   {
     title: "Productivity & Utility Apps",
