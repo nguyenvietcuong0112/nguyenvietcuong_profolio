@@ -105,6 +105,7 @@ const ExperienceSection = () => {
         "Implemented monetization strategies (Ad integration & optimization)",
         "CI/CD: Bitbucket Pipelines, Automated Build & Deployment, Code Signing, Google Play Publishing",
         "Published, maintained, and enhanced apps on Google Play Store and Apple App Store",
+        "Achieved a significant milestone with apps reaching over 5 million total downloads",
       ],
       technologies: ["Flutter", "Android Java", "Android Kotlin", "Swift"],
     },

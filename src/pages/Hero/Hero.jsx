@@ -59,6 +59,7 @@ const profile = {
     quickLearner: true,
     problemSolver: true,
     yearsOfExperience: 4,
+    totalDownloads: '>5M+',
 };
   `);
 

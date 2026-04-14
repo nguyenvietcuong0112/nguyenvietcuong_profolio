@@ -24,9 +24,8 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Cuong, a passionate Flutter & Android developer specializing in
-                building high-performance mobile applications and intuitive user
-                experiences.{" "}
+                Hello! I'm Cuong, a passionate Flutter & Android developer with products reaching{" "}
+                <span className="font-bold text-cyan-400">over 5 million downloads</span> on global app stores. I specialize in building high-performance mobile applications and intuitive user experiences.{" "}
                 <span className="font-bold text-white">
                   I focus on crafting clean architectures and production-ready mobile
                   solutions
