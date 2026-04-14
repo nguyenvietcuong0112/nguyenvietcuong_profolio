@@ -92,6 +92,34 @@ export default function Projects() {
           <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-teal-400" />
         </motion.div>
 
+        {/* Global Impact Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16"
+        >
+          {[
+            { label: "Total Downloads", value: "20M+", sub: "Across all platforms" },
+            { label: "Products", value: "30+", sub: "Published apps" },
+            { label: "Avg Rating", value: "4.5", sub: "User satisfaction" },
+            { label: "Countries", value: "150+", sub: "Global reach" },
+          ].map((stat, index) => (
+            <div key={index} className="bg-zinc-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-colors duration-300">
+              <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400 mb-1">
+                {stat.value}
+              </div>
+              <div className="text-white font-bold text-sm uppercase tracking-wider mb-1">
+                {stat.label}
+              </div>
+              <div className="text-gray-500 text-xs font-medium">
+                {stat.sub}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
         {/* Tab Switcher */}
         <div className="flex gap-4 mb-16">
           <button
@@ -134,6 +162,45 @@ export default function Projects() {
               />
             ))}
           </AnimatePresence>
+        </motion.div>
+
+        {/* Explore More CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <div className="inline-block p-1 rounded-[2.5rem] bg-gradient-to-r from-blue-500/20 via-teal-500/20 to-purple-500/20 backdrop-blur-3xl border border-white/5">
+            <div className="px-12 py-10 rounded-[2.2rem] bg-zinc-950/80 border border-white/5 space-y-6">
+              <h3 className="text-3xl font-bold text-white tracking-tight">
+                Want to see more?
+              </h3>
+              <p className="text-gray-400 max-w-md mx-auto text-lg leading-relaxed">
+                I have developed and optimized dozens of professional applications currently live on major app stores.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 pt-4">
+                <a
+                  href="https://play.google.com/store/apps/developer?id=Nguyen+Viet+Cuong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold rounded-2xl border border-gray-800 transition-all hover:scale-105 active:scale-95"
+                >
+                  <FaAndroid size={24} className="text-green-500" />
+                  Google Play Store
+                </a>
+                <a
+                  href="https://apps.apple.com/developer/nguyen-viet-cuong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold rounded-2xl border border-gray-800 transition-all hover:scale-105 active:scale-95"
+                >
+                  <FaApple size={24} className="text-blue-400" />
+                  Apple App Store
+                </a>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
