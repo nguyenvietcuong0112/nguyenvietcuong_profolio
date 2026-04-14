@@ -5,6 +5,24 @@ import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Smart Expense – Money Planner",
+    category: "company",
+    description:
+      "A comprehensive personal finance management application designed to track daily spending, organize income, and provide practical financial insights with a focus on simplicity and user experience.",
+    color: "#6366f1",
+    githubLink: "#",
+    androidLink: "https://play.google.com/store/apps/details?id=com.moneytracker.financecontrol.dailybudget.expenses",
+  },
+  {
+    title: "Auto Clicker – Tap Tool",
+    category: "company",
+    description:
+      "A powerful touch automation tool designed to automate repetitive screen taps and gestures with precision. Features an intuitive setup for hands-free interaction, making it ideal for gaming and productivity tasks.",
+    color: "#f43f5e",
+    githubLink: "#",
+    androidLink: "https://play.google.com/store/apps/details?id=com.autoclicker.tap.automation",
+  },
+  {
     title: "Walk Log – Pedometer Counter",
     category: "company",
     description:
@@ -42,14 +60,6 @@ const projects = [
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
   },
   {
-    title: "Viettel Data Mining Platform",
-    category: "company",
-    description:
-      "A high-performance data analytics and aggregation platform featuring advanced visualization with Echarts, ChartJs, and D3Js for complex data insights.",
-    color: "#f87171",
-    githubLink: "#",
-  },
-  {
     title: "App Lock – Protect Privacy",
     category: "personal",
     description:
@@ -58,14 +68,6 @@ const projects = [
     githubLink: "#",
     androidLink: "https://play.google.com/store/apps/details?id=com.app.lockit.smartlock",
   },
-  {
-    title: "Productivity & Utility Apps",
-    category: "company",
-    description:
-      "A suite of modular mobile applications across productivity and utility domains, implementing core features like background services, push notifications, and Firebase integration.",
-    color: "#c084fc",
-    githubLink: "#",
-  }
 ];
 
 export default function Projects() {
