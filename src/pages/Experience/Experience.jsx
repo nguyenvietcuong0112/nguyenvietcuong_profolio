@@ -94,7 +94,7 @@ const ExperienceSection = () => {
       title: "Build multiple mobile apps with Flutter and Android",
       period: "07/2023 - Now",
       role: "Mobile Developer",
-      functions: "Data analytics and data aggregation platform",
+      functions: "Development and optimization of high-performance mobile applications across productivity and utility domains",
       specificWork: [
         "Developed and maintained multiple mobile applications across productivity and utility domains",
         "Implemented core features including Maps, Push Notifications, Home Widgets, and background services",
