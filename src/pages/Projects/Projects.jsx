@@ -79,6 +79,8 @@ const additionalApps = [
   "Call Themes",
   "Don't Touch My Phone",
   "PDF",
+  "Spin Wheel",
+  "Game Love",
 ];
 
 export default function Projects() {
