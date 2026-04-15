@@ -2,13 +2,23 @@ import React from "react";
 import { Code2, Briefcase, Calendar, Star, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
+const formatSpecificWorkItem = (item) => {
+  if (typeof item !== "string") return { lead: "", body: "" };
+  const idx = item.indexOf(":");
+  if (idx === -1) return { lead: "", body: item };
+  return {
+    lead: item.slice(0, idx + 1),
+    body: item.slice(idx + 1).trimStart(),
+  };
+};
+
 const ExperienceCard = ({
   title,
   period,
   role,
   functions,
-  specificWork,
-  technologies,
+  specificWork = [],
+  technologies = [],
   icon: Icon,
 }) => (
   <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
@@ -30,16 +40,20 @@ const ExperienceCard = ({
             <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
               {title}
             </h3>
-            <div className="flex items-center gap-2 mt-2 text-cyan-400/80 font-medium">
-              <Briefcase className="w-4 h-4" />
-              <span>{role}</span>
-            </div>
+            {role && (
+              <div className="flex items-center gap-2 mt-2 text-cyan-400/80 font-medium">
+                <Briefcase className="w-4 h-4" />
+                <span>{role}</span>
+              </div>
+            )}
           </div>
         </div>
-        <div className="flex items-center gap-2 text-sm font-mono text-gray-400 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700/50 whitespace-nowrap self-start">
-          <Calendar className="w-4 h-4 text-blue-400" />
-          {period}
-        </div>
+        {period && (
+          <div className="flex items-center gap-2 text-sm font-mono text-gray-400 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700/50 whitespace-nowrap self-start">
+            <Calendar className="w-4 h-4 text-blue-400" />
+            {period}
+          </div>
+        )}
       </div>
 
       {/* Project Functions */}
@@ -63,7 +77,18 @@ const ExperienceCard = ({
           {specificWork.map((item, idx) => (
             <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm group/item">
               <CheckCircle2 className="w-4 h-4 text-blue-500 mt-0.5 shrink-0 group-hover/item:text-cyan-400 transition-colors" />
-              <span className="leading-relaxed">{item}</span>
+              <span className="leading-relaxed">
+                {(() => {
+                  const { lead, body } = formatSpecificWorkItem(item);
+                  if (!lead) return body;
+                  return (
+                    <>
+                      <span className="text-white font-semibold">{lead}</span>{" "}
+                      <span className="text-gray-300">{body}</span>
+                    </>
+                  );
+                })()}
+              </span>
             </li>
           ))}
         </ul>
@@ -88,72 +113,40 @@ const ExperienceCard = ({
 );
 
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      icon: Code2,
-      title: "Build multiple mobile apps with Flutter and Android",
-      period: "07/2023 - Now",
-      role: "Mobile Developer",
-      functions: "Development and optimization of high-performance mobile applications across productivity and utility domains",
-      specificWork: [
-        "Developed and maintained multiple mobile applications across productivity and utility domains",
-        "Implemented core features including Maps, Push Notifications, Home Widgets, and background services",
-        "Integrated Firebase services (Auth, Remote Config, FCM, Firestore, Analytics, Crashlytics)",
-        "Applied Modular & Clean Architecture with MVVM, Bloc, and Provider (Flutter)",
-        "Integrated RESTful APIs with secure data handling",
-        "Integrated Unity modules into Android and iOS applications",
-        "Implemented monetization strategies (Ad integration & optimization)",
-        "CI/CD: Bitbucket Pipelines, Automated Build & Deployment, Code Signing, Google Play Publishing",
-        "Published, maintained, and enhanced apps on Google Play Store and Apple App Store",
-        "Achieved a significant milestone with apps reaching over 5 million total downloads",
-      ],
-      technologies: ["Flutter", "Android Java", "Android Kotlin", "Swift"],
-    },
-    {
-      icon: Star,
-      title: "Viettel Data Mining Platform",
-      period: "01/2023 - 07/2023",
-      role: "Frontend Developer",
-      functions: "Data analytics and data aggregation platform",
-      specificWork: [
-        "Analyze requirements, operations, new features to create the right interface with customer requirements",
-        "Feature development for charts (Echart, ChartJs, D3Js)",
-        "Optimized interface",
-        "Support fixbug directly with customers",
-        "Maintain, develop new features based on the existing system",
-      ],
-      technologies: ["ReactJS"],
-    },
-    {
-      icon: Briefcase,
-      title: "ETAX MOBILE",
-      period: "06/2022 - 12/2022",
-      role: "Mobile Developer",
-      functions: "Pay tax, look up tax registration information, look up payable tax amount: GTGT, TNCN, LBTB ...",
-      specificWork: [
-        "Analysis of new requirements and operations from customers",
-        "Interface builder",
-        "Maintain, develop new features based on the existing system",
-        "Support fixbug directly with customers",
-        "Optimized interface",
-        "Build, release App to AppStore, Google Play",
-      ],
-      technologies: ["Flutter", "Java"],
-    },
-    {
-      icon: Book,
-      title: "Jasu",
-      period: "10/2021 - 05/2022",
-      role: "Mobile Developer",
-      functions: "Build a system of tutors and students with basic functions such as Login, Register, Create class, Register to teach, display class list...",
-      specificWork: [
-        "Analysis of requirements, business",
-        "System Design",
-        "Build interface for registration, login, class list display, class creation, API integration",
-        "Team Management",
-      ],
-      technologies: ["React Native", "Java"],
-    },
+  const workExperience = {
+    icon: Code2,
+    title: "Work Experience",
+    functions:
+      "Mobile Developer focused on Flutter and Android (Java/Kotlin), shipping production apps with strong performance, reliability, and monetization.",
+    specificWork: [
+      "🚀 Mobile App Scaling: Built and scaled Android & Flutter apps in productivity/utility domains for a global audience; reached 5M+ total downloads.",
+      "🧠 Architecture: Migrated legacy monoliths to Multi-Module + Clean Architecture with MVVM/MVI (Android) and Bloc/Provider (Flutter), improving maintainability and delivery speed.",
+      "🛠️ Core Engineering: Implemented Maps, Push Notifications (FCM), Home Screen Widgets, and Background Services for persistent utility workflows.",
+      "☁️ Cloud Ecosystem: Leveraged Firebase (Auth, Remote Config, Firestore, Analytics, Crashlytics) for experiments, feature rollout, and real-time monitoring.",
+      "🔐 API Integration: Integrated RESTful APIs with secure data handling, robust error handling, and offline-friendly flows where needed.",
+      "⚡ Performance & Stability: Profiled and optimized UI/IO paths; targeted smooth 60FPS UX and maintained crash rate under 1%.",
+      "💰 Monetization: Integrated and optimized Google AdMob (mediation, load strategy, frequency capping) to grow revenue without hurting UX.",
+      "🎮 Engine Bridging: Integrated Unity modules into Android/iOS apps with low-latency communication and cross-module state synchronization.",
+      "🧪 CI/CD & Release: Built pipelines (GitHub Actions / Bitbucket Pipelines) with automated build, code signing, staged rollouts, and store publishing.",
+    ],
+    technologies: [
+      "Flutter",
+      "Android (Java/Kotlin)",
+      "MVVM/MVI",
+      "Clean/Modular Architecture",
+      "Hilt",
+      "Coroutines/Flow",
+      "Room",
+      "AdMob",
+      "Firebase",
+      "CI/CD",
+    ],
+  };
+
+  const selectedCompanies = [
+    { name: "Trip Global Studio" },
+    { name: "Viettel Software" },
+    { name: "Seatech Jsc" },
   ];
 
   return (
@@ -168,30 +161,50 @@ const ExperienceSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mb-20">
           <h2 className="text-sm font-mono text-cyan-400 uppercase tracking-[0.3em] mb-4">
-            Professional History
+            Work Experience
           </h2>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Journey</span>
+            My{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              Experience
+            </span>
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed">
-            A chronological look at my professional growth and the projects that have shaped my career as a developer.
+            A focused summary of what I deliver in production mobile apps: architecture, core features, performance, monetization, and release pipelines.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={index} {...exp} />
-          ))}
+        {/* Selected Companies / Products */}
+        <div className="max-w-5xl mx-auto mb-10">
+          <div className="relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/30 backdrop-blur-xl">
+            <div className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500/0 via-cyan-500/30 to-purple-500/0 opacity-60" />
+            <div className="relative p-6">
+              <div className="flex items-center gap-2 text-gray-300 text-sm font-medium uppercase tracking-wider mb-4">
+                <Briefcase className="w-4 h-4 text-cyan-400" />
+                Selected Companies / Products
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {selectedCompanies.map((c) => (
+                  <Badge
+                    key={c.name}
+                    variant="outline"
+                    className="bg-blue-500/5 hover:bg-blue-500/10 text-blue-200 border-blue-500/20 py-1 px-3 rounded-lg text-xs font-medium transition-all duration-300"
+                    title={c.note}
+                  >
+                    {c.name}
+                    {c.note ? <span className="text-gray-400"> · {c.note}</span> : null}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <ExperienceCard {...workExperience} />
         </div>
       </div>
 
-      <style jsx>{`
-        .bg-grid-pattern {
-          background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-          background-size: 40px 40px;
-        }
-      `}</style>
     </main>
   );
 };

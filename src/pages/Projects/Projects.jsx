@@ -8,45 +8,45 @@ const projects = [
     title: "Smart Expense – Money Planner",
     category: "company",
     description:
-      "A comprehensive personal finance management application designed to track daily spending, organize income, and provide practical financial insights with a focus on simplicity and user experience.",
+      "A comprehensive personal finance management application designed to track daily spending and provide financial insights. Optimized for billion-scale data sync and real-time analytics.",
     color: "#6366f1",
-    githubLink: "#",
+    tech: ["Flutter", "Bloc", "Firebase", "SQLite", "FCM"],
     androidLink: "https://play.google.com/store/apps/details?id=com.moneytracker.financecontrol.dailybudget.expenses",
   },
   {
     title: "Auto Clicker – Tap Tool",
     category: "company",
     description:
-      "A powerful touch automation tool designed to automate repetitive screen taps and gestures with precision. Features an intuitive setup for hands-free interaction, making it ideal for gaming and productivity tasks.",
+      "High-precision touch automation tool. Engineered with low-latency foreground services and custom view overlays for seamless user interaction.",
     color: "#f43f5e",
-    githubLink: "#",
+    tech: ["Native Java", "Accessibility Service", "Foreground Service", "Advanced UI Overlays"],
     androidLink: "https://play.google.com/store/apps/details?id=com.autoclicker.tap.automation",
   },
   {
     title: "Walk Log – Pedometer Counter",
     category: "company",
     description:
-      "A sophisticated health and fitness application designed to monitor daily physical activity. Tracks steps, distance covered, calories burned, and active duration with personalized goal setting and detailed activity analytics.",
+      "Advanced health tracker with real-time step counting. Implemented custom sensor processing algorithms and optimized battery consumption for background tracking.",
     color: "#f59e0b",
-    githubLink: "#",
+    tech: ["Kotlin", "Sensor APIs", "Google Maps", "WorkManager"],
     androidLink: "https://play.google.com/store/apps/details?id=com.pedometer.steptracker.runwalk.dailytrack",
   },
   {
     title: "Money Tracker: Budget Manager",
     category: "personal",
     description:
-      "A personal finance tool designed to help users track daily expenses and understand their spending habits through a simple, clear, and intuitive interface. Features include multi-wallet management and detailed transaction history.",
+      "A personal finance tool focused on intuitive UX and core data performance. Features multi-wallet management and cloud synchronization.",
     color: "#22c55e",
-    githubLink: "#",
+    tech: ["Swift", "SwiftUI", "CoreData", "CloudKit"],
     iosLink: "https://apps.apple.com/us/app/money-tracker-budget-manager/id6757209828",
   },
   {
     title: "ETAX MOBILE",
     category: "company",
     description:
-      "A comprehensive mobile application for tax services, allowing users to pay taxes, look up registrations, and manage financial documents seamlessly. Built for both iOS and Android.",
+      "Official government tax service application. Optimized for secure RESTful communication and high-volume document handling across Android and iOS.",
     color: "#4ade80",
-    githubLink: "#",
+    tech: ["Flutter", "Java", "REST API", "JSON Web Tokens", "TLS Encryption"],
     androidLink: "https://play.google.com/store/apps/details?id=com.etax.icanhan",
     iosLink: "https://apps.apple.com/vn/app/etax-mobile/id1589750682?l=vi",
   },
@@ -54,18 +54,18 @@ const projects = [
     title: "Coloring Book - Paint & Color Art",
     category: "personal",
     description:
-      "A relaxing and creative coloring book application for all ages, featuring a wide variety of artworks to color and share. High performance with smooth rendering.",
+      "Creative art platform featuring smooth 2D rendering and custom canvas drawing engines for high-performance coloring experiences.",
     color: "#fb923c",
-    githubLink: "#",
+    tech: ["Java", "Custom Canvas", "AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
   },
   {
     title: "App Lock – Protect Privacy",
     category: "personal",
     description:
-      "A professional privacy-focused application designed to safeguard personal data by locking sensitive apps with a secure PIN. Features a streamlined interface, multimedia protection for galleries, and real-time security overlays.",
+      "Privacy-first application utilizing system-level security overlays and biometric authentication to safeguard user data.",
     color: "#3b82f6",
-    githubLink: "#",
+    tech: ["Java", "Room DB", "Biometrics", "Dagger Hilt"],
     androidLink: "https://play.google.com/store/apps/details?id=com.app.lockit.smartlock",
   },
 ];
@@ -101,10 +101,10 @@ export default function Projects() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16"
         >
           {[
-            { label: "Total Downloads", value: "20M+", sub: "Across all platforms" },
-            { label: "Products", value: "30+", sub: "Published apps" },
-            { label: "Avg Rating", value: "4.5", sub: "User satisfaction" },
-            { label: "Countries", value: "150+", sub: "Global reach" },
+            { label: "Total Downloads", value: "5M+", sub: "Across global markets" },
+            { label: "Products", value: "30+", sub: "Published on Play Store" },
+            { label: "Avg Rating", value: "4.0+", sub: "High user satisfaction" },
+            { label: "Crash Rate", value: "< 1%", sub: "High app stability" },
           ].map((stat, index) => (
             <div key={index} className="bg-zinc-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-colors duration-300">
               <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400 mb-1">
@@ -159,49 +159,12 @@ export default function Projects() {
                 githubLink={project.githubLink}
                 androidLink={project.androidLink}
                 iosLink={project.iosLink}
+                tech={project.tech}
               />
             ))}
           </AnimatePresence>
         </motion.div>
 
-        {/* Explore More CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <div className="inline-block p-1 rounded-[2.5rem] bg-gradient-to-r from-blue-500/20 via-teal-500/20 to-purple-500/20 backdrop-blur-3xl border border-white/5">
-            <div className="px-12 py-10 rounded-[2.2rem] bg-zinc-950/80 border border-white/5 space-y-6">
-              <h3 className="text-3xl font-bold text-white tracking-tight">
-                Want to see more?
-              </h3>
-              <p className="text-gray-400 max-w-md mx-auto text-lg leading-relaxed">
-                I have developed and optimized dozens of professional applications currently live on major app stores.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 pt-4">
-                <a
-                  href="https://play.google.com/store/apps/developer?id=Nguyen+Viet+Cuong"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold rounded-2xl border border-gray-800 transition-all hover:scale-105 active:scale-95"
-                >
-                  <FaAndroid size={24} className="text-green-500" />
-                  Google Play Store
-                </a>
-                <a
-                  href="https://apps.apple.com/developer/nguyen-viet-cuong"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold rounded-2xl border border-gray-800 transition-all hover:scale-105 active:scale-95"
-                >
-                  <FaApple size={24} className="text-blue-400" />
-                  Apple App Store
-                </a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
@@ -215,6 +178,7 @@ function Card({
   githubLink,
   androidLink,
   iosLink,
+  tech = [],
 }) {
   return (
     <motion.div
@@ -245,6 +209,19 @@ function Card({
         <p className="text-gray-400 line-clamp-4 mb-8 leading-relaxed">
           {description}
         </p>
+
+        {tech.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {tech.map((t, index) => (
+              <span
+                key={index}
+                className="px-2 py-1 text-[10px] font-mono rounded bg-blue-500/10 text-blue-400 border border-blue-500/20"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="mt-auto space-y-4">
           <div className="h-[1px] w-full bg-gray-800/50" />

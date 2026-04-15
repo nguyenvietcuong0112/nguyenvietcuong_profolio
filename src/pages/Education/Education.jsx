@@ -15,14 +15,14 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Bachelor's Degree",
+      degree: "Computer Science & Engineering",
       school: "VNU University of Science",
-      mascot: "📘",
-      year: "2018-2022",
-      achievements: ["Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      mascot: "🎓",
+      year: "2018 - 2022",
+      achievements: ["Excellent Thesis", "Top 10% Academic Award"],
+      skills: ["Data Structures & Algorithms", "OS Fundamentals", "Software Engineering", "Mathematics"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Specialized in core Computer Science fundamentals, software architecture, and system design, establishing a strong foundation for high-performance mobile application development.",
     },
 
   ];

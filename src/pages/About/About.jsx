@@ -24,20 +24,15 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Cuong, a passionate Flutter & Android developer with products reaching{" "}
-                <span className="font-bold text-cyan-400">over 5 million downloads</span> on global app stores. I specialize in building high-performance mobile applications and intuitive user experiences.{" "}
-                <span className="font-bold text-white">
-                  I focus on crafting clean architectures and production-ready mobile
-                  solutions
-                </span>
-                , from idea to release.
+                Hello! I'm Cuong, a <span className="text-cyan-400 font-bold">Mobile Engineer</span> with a proven track record of building and scaling mobile applications for global markets reaching <span className="text-cyan-400 font-bold">5M+ downloads</span>.
               </p>
 
               <p className="text-white">
-                My work centers around Flutter,Android (Java/Kotlin),React Native, with a strong
-                emphasis on scalability, performance, and maintainable code. I enjoy
-                transforming complex requirements into smooth, reliable mobile apps that
-                deliver real value to users.
+                I specialize in high-impact mobile solutions, focusing on performance, user growth, and <span className="font-bold border-b-2 border-blue-500/50">AdMob monetization</span>. My expertise lies in optimizing eCPM, ARPDAU, and retention through data-driven decisions and rigorous A/B testing.
+              </p>
+
+              <p className="text-white">
+                I am passionate about building products with measurable impact and sustainable growth, transforming technical complexity into seamless user experiences that scale to millions.
               </p>
 
               <div className="pt-6">
@@ -51,7 +46,7 @@ export default function About() {
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Cuong, Flutter & Android Developer
+                      Cuong, Mobile Engineer
                     </cite>
                     <div className="flex items-center gap-2">
                       {/* Optional: replace with your app logo */}

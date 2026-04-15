@@ -44,22 +44,23 @@ const GridBackground = () => {
 export default function Hero() {
   const words = [
     "Mobile Developer",
-    "Flutter Developer & Android Developer",
-    "React Native",
+    "5M+ Downloads",
+    "AdMob Monetization Expert",
   ];
 
   const [code] = useState(`
-const profile = {
+const mobileDeveloper = {
     name: 'Nguyen Viet Cuong',
-    title: 'Mobile Developer',
-    skills: [
-        'Flutter', 'Android', 'React Native', 'Java', 'ReactJS',
-    ],
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    yearsOfExperience: 4,
-    totalDownloads: '>5M+',
+    role: 'Mobile Developer',
+    main: ['Flutter', 'Android (Java/Kotlin)'],
+    architecture: ['Modular', 'Clean', 'MVVM/MVI'],
+    expertise: {
+        scaling: '5M+ Global Downloads',
+        monetization: 'AdMob Optimization',
+        performance: '60FPS | <1% Crash Rate'
+    },
+    stack: ['Flutter', 'Kotlin', 'Java', 'React Native'],
+    passion: 'Building high-impact products with sustainable growth'
 };
   `);
 
@@ -202,7 +203,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Flutter & Android Developer 🚀 | Crafting high-performance mobile apps 🔧 | Turning ideas into products 💻✨
+                  Expert in building and scaling mobile apps for global markets with over <span className="text-blue-400 font-bold">5M+ downloads</span>. Specializing in high-performance architecture and <span className="text-teal-400 font-bold">data-driven AdMob optimization</span>. 🚀
                 </p>
               </div>
 

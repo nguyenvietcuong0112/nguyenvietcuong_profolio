@@ -71,63 +71,39 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
 const SkillsSection = () => {
   const skillCategories = [
   {
-        icon: Code2,
-        title: "Mobile Development",
-        color: "text-blue-400",
-      skills: [
-        {
-          name: "Flutter",
-          icon: <SiFlutter className="w-4 h-4 text-[#02569B]" />,
-        },
-        {
-          name: "React Native",
-          icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
-        },
-        {
-          name: "Android",
-          icon: <SiAndroid className="w-4 h-4 text-[#3DDC84]" />,
-        },
-        { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
-      ],
-    },
-    {
-      icon: Code2,
-      title: "FrontEnd Development",
-      color: "text-blue-400",
-      skills: [
-        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
-        {
-          name: "HTML",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
-        },
-        {
-          name: "CSS",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
-        },
-      ],
-    },
-    {
-      icon: Database,
-      title: "BackEnd Development",
-      color: "text-green-400",
-      skills: [
-        { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
-        { name: "MySQL", icon: <SiMysql className="w-4 h-4 text-[#4479A1]" /> },
-        {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
-        },
-        {
-          name: "REST API",
-          icon: <TbApi className="w-4 h-4 text-[#FF6C37]" />,
-        },
-      ],
-    },
-
+    icon: Cpu,
+    title: "Mobile Engineering",
+    color: "text-blue-400",
+    skills: [
+      { name: "Android Native", icon: <SiAndroid className="w-4 h-4 text-[#3DDC84]" /> },
+      { name: "Kotlin / Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
+      { name: "Flutter / Dart", icon: <SiFlutter className="w-4 h-4 text-[#02569B]" /> },
+      { name: "React Native", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+    ],
+  },
+  {
+    icon: Layout,
+    title: "Architecture & Reactive",
+    color: "text-purple-400",
+    skills: [
+      { name: "MVVM / MVI", icon: <BsGrid1X2 className="w-4 h-4 text-purple-400" /> },
+      { name: "Clean Architecture", icon: <FcWorkflow className="w-4 h-4" /> },
+      { name: "Coroutines / Flow", icon: <MdAnimation className="w-4 h-4 text-cyan-400" /> },
+      { name: "Hilt / Dagger", icon: <Cpu className="w-4 h-4 text-amber-400" /> },
+      { name: "Firebase / Room", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
+    ],
+  },
+  {
+    icon: Cloud,
+    title: "Engineering Excellence",
+    color: "text-orange-400",
+    skills: [
+      { name: "CI / CD", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
+      { name: "Performance Profiling", icon: <Database className="w-4 h-4 text-green-400" /> },
+      { name: "Unit / UI Testing", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
+      { name: "REST / GraphQL", icon: <TbApi className="w-4 h-4 text-[#FF6C37]" /> },
+    ],
+  },
 
   ];
 
@@ -152,32 +128,6 @@ const SkillsSection = () => {
           ))}
         </div>
       </section>
-      <style jsx>{`
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-        .bg-grid-pattern {
-          background-image: linear-gradient(
-              to right,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to bottom,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            );
-          background-size: 30px 30px;
-        }
-      `}</style>
     </main>
   );
 };
