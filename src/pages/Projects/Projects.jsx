@@ -35,9 +35,9 @@ const projects = [
     title: "Money Tracker: Budget Manager",
     category: "personal",
     description:
-      "A personal finance tool focused on intuitive UX and core data performance. Features multi-wallet management and cloud synchronization.",
+      "A Flutter personal finance app focused on intuitive UX and high-performance local data handling. Features multi-wallet management and cloud synchronization.",
     color: "#22c55e",
-    tech: ["Swift", "SwiftUI", "CoreData", "CloudKit"],
+    tech: ["Flutter", "Dart", "SQLite", "Firebase Sync", "Bloc"],
     iosLink: "https://apps.apple.com/us/app/money-tracker-budget-manager/id6757209828",
   },
   {
@@ -54,9 +54,9 @@ const projects = [
     title: "Coloring Book - Paint & Color Art",
     category: "personal",
     description:
-      "Creative art platform featuring smooth 2D rendering and custom canvas drawing engines for high-performance coloring experiences.",
+      "Creative Flutter art platform featuring smooth 2D rendering, custom canvas drawing, and an optimized Flood Fill algorithm for high-performance coloring experiences.",
     color: "#fb923c",
-    tech: ["Java", "Custom Canvas", "AdMob Mediation", "Billing API"],
+    tech: ["Flutter", "Custom Canvas", "Flood Fill Algorithm", "AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
   },
   {
@@ -101,7 +101,7 @@ export default function Projects() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16"
         >
           {[
-            { label: "Total Downloads", value: "5M+", sub: "Across global markets" },
+            { label: "Total Downloads", value: "30M+", sub: "Across global markets" },
             { label: "Products", value: "30+", sub: "Published on Play Store" },
             { label: "Avg Rating", value: "4.0+", sub: "High user satisfaction" },
             { label: "Crash Rate", value: "< 1%", sub: "High app stability" },

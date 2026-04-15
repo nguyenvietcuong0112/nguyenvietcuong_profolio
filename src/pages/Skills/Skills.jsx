@@ -2,37 +2,22 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
-import { Code2, Paintbrush, Database, Layout, Cpu, Cloud } from "lucide-react";
+import { Database, Layout, Cpu, Cloud } from "lucide-react";
 import {
   FaReact,
-  FaNodeJs,
-  FaPython,
-  FaDocker,
   FaGitAlt,
-  FaLinux,
-  FaFigma,
-  FaAws,
   FaJava,
 } from "react-icons/fa";
 import {
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiPostgresql,
-  SiMongodb,
-  SiGraphql,
+  SiSpringboot,
   SiJest,
-  SiWebpack,
-  SiRedux,
+  SiTailwindcss,
   SiFirebase,
-  SiVercel,
-  SiVite,
   SiFlutter,
   SiAndroid,
-  SiMysql,
 } from "react-icons/si";
-import { TbBrandVscode, TbApi } from "react-icons/tb";
-import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
+import { TbApi } from "react-icons/tb";
+import { BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
 
@@ -83,25 +68,38 @@ const SkillsSection = () => {
   },
   {
     icon: Layout,
-    title: "Architecture & Reactive",
+    title: "Frontend",
     color: "text-purple-400",
+    skills: [
+      { name: "ReactJS", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="w-4 h-4 text-[#38BDF8]" /> },
+      { name: "REST API Integration", icon: <TbApi className="w-4 h-4 text-[#FF6C37]" /> },
+    ],
+  },
+  {
+    icon: Database,
+    title: "Backend",
+    color: "text-emerald-400",
+    skills: [
+      { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
+      { name: "Spring Boot", icon: <SiSpringboot className="w-4 h-4 text-[#6DB33F]" /> },
+      { name: "REST API Development", icon: <TbApi className="w-4 h-4 text-[#FF6C37]" /> },
+      { name: "Authentication & Security", icon: <Database className="w-4 h-4 text-emerald-400" /> },
+    ],
+  },
+  {
+    icon: Cloud,
+    title: "Architecture & Delivery",
+    color: "text-orange-400",
     skills: [
       { name: "MVVM / MVI", icon: <BsGrid1X2 className="w-4 h-4 text-purple-400" /> },
       { name: "Clean Architecture", icon: <FcWorkflow className="w-4 h-4" /> },
       { name: "Coroutines / Flow", icon: <MdAnimation className="w-4 h-4 text-cyan-400" /> },
       { name: "Hilt / Dagger", icon: <Cpu className="w-4 h-4 text-amber-400" /> },
       { name: "Firebase / Room", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
-    ],
-  },
-  {
-    icon: Cloud,
-    title: "Engineering Excellence",
-    color: "text-orange-400",
-    skills: [
       { name: "CI / CD", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
       { name: "Performance Profiling", icon: <Database className="w-4 h-4 text-green-400" /> },
       { name: "Unit / UI Testing", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
-      { name: "REST / GraphQL", icon: <TbApi className="w-4 h-4 text-[#FF6C37]" /> },
     ],
   },
 
@@ -116,7 +114,7 @@ const SkillsSection = () => {
         <div className="flex justify-center items-center ">
           <IconCloudDemo />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <SkillCard
               key={index}
