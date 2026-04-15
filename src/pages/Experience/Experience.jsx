@@ -127,6 +127,7 @@ const ExperienceSection = () => {
       "⚡ Performance & Stability: Profiled and optimized UI/IO paths; targeted smooth 60FPS UX and maintained crash rate under 1%.",
       "💰 Monetization: Integrated and optimized Google AdMob (mediation, load strategy, frequency capping) to grow revenue without hurting UX.",
       "🎮 Engine Bridging: Integrated Unity modules into Android/iOS apps with low-latency communication and cross-module state synchronization.",
+      "🧩 SDK & Ads Library: Built reusable Android SDK/libraries and integrated ads SDKs for Unity games, including bridge layers, callback handling, and runtime optimization.",
       "🧪 CI/CD & Release: Built pipelines (GitHub Actions / Bitbucket Pipelines) with automated build, code signing, staged rollouts, and store publishing.",
     ],
     technologies: [
