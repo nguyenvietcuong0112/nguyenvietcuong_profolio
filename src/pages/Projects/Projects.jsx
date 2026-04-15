@@ -70,6 +70,17 @@ const projects = [
   },
 ];
 
+const additionalApps = [
+  "BloodPressure",
+  "Clap Find Phone",
+  "Weather",
+  "QR Code",
+  "Photo Cleaner",
+  "Call Themes",
+  "Don't Touch My Phone",
+  "PDF",
+];
+
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("company");
 
@@ -163,6 +174,31 @@ export default function Projects() {
               />
             ))}
           </AnimatePresence>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="mt-14 rounded-3xl border border-gray-800/50 bg-zinc-900/40 p-8 backdrop-blur-sm"
+        >
+          <h3 className="text-2xl font-bold text-white mb-3">
+            Other Apps I Have Built
+          </h3>
+          <p className="text-gray-400 mb-5">
+            Products delivered across different domains (store links are not available for all apps).
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {additionalApps.map((app) => (
+              <span
+                key={app}
+                className="px-3 py-1.5 text-xs font-mono rounded-lg bg-blue-500/10 text-blue-300 border border-blue-500/20"
+              >
+                {app}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
       </div>
