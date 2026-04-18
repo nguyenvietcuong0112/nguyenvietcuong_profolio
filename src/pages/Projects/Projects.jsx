@@ -10,7 +10,7 @@ const projects = [
     description:
       "A comprehensive personal finance management application designed to track daily spending and provide financial insights. Optimized for billion-scale data sync and real-time analytics.",
     color: "#6366f1",
-    tech: ["Flutter", "Bloc", "Firebase", "SQLite", "FCM"],
+    tech: ["Kotlin", "Clean Architecture", "Firebase", "SQLite", "FCM"],
     androidLink: "https://play.google.com/store/apps/details?id=com.moneytracker.financecontrol.dailybudget.expenses",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description:
       "High-precision touch automation tool. Engineered with low-latency foreground services and custom view overlays for seamless user interaction.",
     color: "#f43f5e",
-    tech: ["Native Java", "Accessibility Service", "Foreground Service", "Advanced UI Overlays"],
+    tech: ["Kotlin", "Accessibility Service", "Foreground Service", "Advanced UI Overlays"],
     androidLink: "https://play.google.com/store/apps/details?id=com.autoclicker.tap.automation",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     description:
       "Official government tax service application. Optimized for secure RESTful communication and high-volume document handling across Android and iOS.",
     color: "#4ade80",
-    tech: ["Flutter", "Java", "REST API", "JSON Web Tokens", "TLS Encryption"],
+    tech: ["Flutter", "Kotlin", "REST API", "JSON Web Tokens", "TLS Encryption"],
     androidLink: "https://play.google.com/store/apps/details?id=com.etax.icanhan",
     iosLink: "https://apps.apple.com/vn/app/etax-mobile/id1589750682?l=vi",
   },
@@ -65,7 +65,7 @@ const projects = [
     description:
       "Privacy-first application utilizing system-level security overlays and biometric authentication to safeguard user data.",
     color: "#3b82f6",
-    tech: ["Java", "Room DB", "Biometrics", "Dagger Hilt"],
+    tech: ["Kotlin", "Room DB", "Biometrics", "Dagger Hilt"],
     androidLink: "https://play.google.com/store/apps/details?id=com.app.lockit.smartlock",
   },
 ];
