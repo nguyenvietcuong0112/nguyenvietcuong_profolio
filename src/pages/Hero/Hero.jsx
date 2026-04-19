@@ -305,7 +305,7 @@ const mobileDeveloper = {
                       <div className="window-dot bg-green-500"></div>
                       <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
                         <i className="fas fa-terminal"></i>
-                        senior-dev.profile
+                        dev.profile
                       </span>
                     </div>
                     <pre className="language-javascript">

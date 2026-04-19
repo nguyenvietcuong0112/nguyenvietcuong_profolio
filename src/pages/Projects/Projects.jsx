@@ -33,7 +33,7 @@ const projects = [
   },
   {
     title: "Money Tracker: Budget Manager",
-    category: "personal",
+    category: "company",
     description:
       "A Flutter personal finance app focused on intuitive UX and high-performance local data handling. Features multi-wallet management and cloud synchronization.",
     color: "#22c55e",
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: "App Lock – Protect Privacy",
-    category: "personal",
+    category: "company",
     description:
       "Privacy-first application utilizing system-level security overlays and biometric authentication to safeguard user data.",
     color: "#3b82f6",
@@ -156,6 +156,21 @@ export default function Projects() {
             PERSONAL
           </button>
         </div>
+        
+        {activeTab === "company" && (
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="mb-10 flex items-center gap-4 p-4 rounded-2xl bg-blue-500/5 border border-blue-500/10 backdrop-blur-sm"
+          >
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+              <i className="fas fa-info-circle text-blue-400"></i>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              <span className="text-blue-400 font-bold">Note:</span> These represent my most recent professional contributions and high-impact products. I have successfully delivered <span className="text-white font-medium">30+ additional applications</span> across various domains that are not featured in this highlighted selection.
+            </p>
+          </motion.div>
+        )}
 
         <motion.div 
           layout
