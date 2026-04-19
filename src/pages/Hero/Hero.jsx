@@ -41,28 +41,60 @@ const GridBackground = () => {
   );
 };
 
-export default function Hero() {
-  const words = [
-    "Mobile Developer",
-    "5M+ Downloads",
-    "AdMob Monetization Expert",
+const ImpactMetric = ({ label, value, icon, color }) => (
+  <div className="group relative px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-blue-500/30 hover:shadow-[0_0_20px_-5px_rgba(59,130,246,0.3)]">
+    <div className="flex items-center gap-3">
+      <div className={`p-2 rounded-lg bg-gray-800/50 ${color}`}>
+        <i className={`fas ${icon} text-lg`}></i>
+      </div>
+      <div>
+        <div className="text-2xl font-bold text-white tracking-tight">{value}</div>
+        <div className="text-[10px] uppercase tracking-wider text-gray-400 font-medium">{label}</div>
+      </div>
+    </div>
+  </div>
+);
+
+const TechStackBar = () => {
+  const stacks = [
+    { name: "Flutter", color: "text-blue-400", icon: "fa-mobile-screen-button" },
+    { name: "Android Native", color: "text-green-400", icon: "fa-android" },
+    { name: "React Native", color: "text-cyan-400", icon: "fa-react" },
   ];
 
-  const [code] = useState(`
+  return (
+    <div className="flex flex-wrap gap-3 mt-6 animate__animated animate__fadeInUp animate__delay-1s">
+      {stacks.map((stack) => (
+        <div key={stack.name} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-800/40 border border-gray-700/50 backdrop-blur-sm text-xs font-semibold text-gray-300 hover:text-white hover:border-gray-600 transition-colors cursor-default">
+          <i className={`fas ${stack.icon} ${stack.color}`}></i>
+          {stack.name}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default function Hero() {
+  const words = [
+    "Android (Java/Kotlin)",
+    "Flutter Developer",
+    "React Native",
+    "ReactJS Enthusiast",
+  ];
+
+const code = `
 const mobileDeveloper = {
     name: 'Nguyen Viet Cuong',
-    role: 'Mobile Developer',
-    main: ['Flutter', 'Android (Java/Kotlin)'],
-    architecture: ['Modular', 'Clean', 'MVVM/MVI'],
-    expertise: {
-        scaling: '5M+ Global Downloads',
-        monetization: 'AdMob Optimization',
-        performance: '60FPS | <1% Crash Rate'
+    role: 'Mobile Engineer',
+    specialization: ['Modular Architecture', 'Performance Scaling'],
+    mastery: {
+        architecture: 'Clean & Modular',
+        responsiveness: 'Zero-Jank UI',
+        stability: 'Reliable Systems'
     },
-    stack: ['Flutter', 'Kotlin', 'Java', 'React Native'],
-    passion: 'Building high-impact products with sustainable growth'
+    passion: 'Building scalable and maintainable products'
 };
-  `);
+`;
 
   useEffect(() => {
     Prism.highlightAll();
@@ -203,7 +235,7 @@ const mobileDeveloper = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Expert in building and scaling mobile apps for global markets with over <span className="text-blue-400 font-bold">5M+ downloads</span>. Specializing in high-performance architecture and <span className="text-teal-400 font-bold">data-driven AdMob optimization</span>. 🚀
+                  Specializing in building <span className="text-blue-400 font-bold">highly scalable</span> mobile architectures and <span className="text-teal-400 font-bold">high-performance systems</span>. Expert in modular development and optimizing large-scale applications for a seamless user experience. 🚀
                 </p>
               </div>
 
@@ -256,23 +288,44 @@ const mobileDeveloper = {
               </div>
             </div>
 
-            {/* Right column - Code window */}
-            <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
-              <div className="gradient-border">
-                <div className="code-window bg-[#091121]">
-                  <div className="window-header">
-                    <div className="window-dot bg-red-500"></div>
-                    <div className="window-dot bg-yellow-500"></div>
-                    <div className="window-dot bg-green-500"></div>
-                    <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
-                      <i className="fas fa-code"></i>
-                      developer.js
-                    </span>
-                  </div>
-                  <pre className="language-javascript">
-                    <code className="language-javascript">{code}</code>
-                  </pre>
+            {/* Right column - Code window & Impact Dashboard */}
+            <div className="w-full lg:w-1/2 animate__animated animate__fadeInRight animate__delay-0.1s">
+              <div className="relative">
+                {/* Impact Metrics Overlay - Top side */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 relative z-20">
+                  <ImpactMetric label="Project Scaling" value="Modular" icon="fa-layer-group" color="text-blue-400" />
+                  <ImpactMetric label="System Efficiency" value="Stable" icon="fa-shield-halved" color="text-emerald-400" />
                 </div>
+
+                <div className="gradient-border relative z-10">
+                  <div className="code-window bg-[#091121] shadow-2xl">
+                    <div className="window-header">
+                      <div className="window-dot bg-red-500"></div>
+                      <div className="window-dot bg-yellow-500"></div>
+                      <div className="window-dot bg-green-500"></div>
+                      <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
+                        <i className="fas fa-terminal"></i>
+                        senior-dev.profile
+                      </span>
+                    </div>
+                    <pre className="language-javascript">
+                      <code className="language-javascript">{code}</code>
+                    </pre>
+                  </div>
+                </div>
+
+                {/* Impact Metrics Overlay - Bottom side */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 relative z-20">
+                  <ImpactMetric label="UI Performance" value="Smooth" icon="fa-gauge-high" color="text-yellow-400" />
+                  <ImpactMetric label="Architectural" value="Clean" icon="fa-gem" color="text-purple-400" />
+                </div>
+
+                {/* Tech Stack Horizontal Bar */}
+                <TechStackBar />
+                
+                {/* Decorative glow background */}
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px] -z-10"></div>
+                <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-teal-500/10 rounded-full blur-[100px] -z-10"></div>
               </div>
             </div>
           </div>
