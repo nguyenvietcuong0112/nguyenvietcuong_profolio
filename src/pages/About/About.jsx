@@ -28,7 +28,7 @@ export default function About() {
               </p>
 
               <p className="text-white">
-                I specialize in high-impact mobile solutions, focusing on performance, user growth, and <span className="font-bold border-b-2 border-blue-500/50">AdMob monetization</span>. My expertise lies in optimizing eCPM, ARPDAU, and retention through data-driven decisions and rigorous A/B testing.
+                I specialize in high-impact mobile solutions with a strong focus on <span className="font-bold border-b-2 border-blue-500/50">Monetization & Analytics SDK Development</span>. I have extensive experience building centralized libraries that seamlessly integrate AdMob, AppLovin, AppsFlyer, and Adjust. My expertise lies in optimizing eCPM, ARPDAU, and ROAS through robust ad-loading strategies, precise event tracking, and data-driven A/B testing.
               </p>
 
               <p className="text-white">

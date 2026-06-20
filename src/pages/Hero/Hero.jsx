@@ -86,13 +86,13 @@ const code = `
 const mobileDeveloper = {
     name: 'Nguyen Viet Cuong',
     role: 'Mobile Engineer',
-    specialization: ['Modular Architecture', 'Performance Scaling'],
+    specialization: ['Monetization SDKs', 'Modular Architecture'],
     mastery: {
-        architecture: 'Clean & Modular',
-        responsiveness: 'Zero-Jank UI',
-        stability: 'Reliable Systems'
+        architecture: 'Clean & Scalable',
+        ads_tracking: 'AdMob, Adjust, AppsFlyer',
+        performance: 'Zero-Jank UI & Reliable Systems'
     },
-    passion: 'Building scalable and maintainable products'
+    passion: 'Building scalable products with maximum ARPDAU'
 };
 `;
 

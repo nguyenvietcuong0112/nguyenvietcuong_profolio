@@ -5,6 +5,24 @@ import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Core Monetization & Tracking SDK",
+    category: "company",
+    description:
+      "A proprietary centralized Android/Unity SDK built to unify AdMob, AppLovin MAX, Adjust, AppsFlyer, and Firebase. Integrated across 30+ applications, it manages complex ad bidding, waterfall strategies, UMP consent, and precise event postbacks to maximize ARPDAU and ensure accurate ROAS tracking.",
+    color: "#a855f7",
+    tech: ["Android AAR", "Unity Bridge", "AdMob/MAX", "AppsFlyer/Adjust", "Analytics"],
+  },
+    {
+        title: "ETAX MOBILE",
+        category: "company",
+        description:
+          "Official government tax service application. Optimized for secure RESTful communication and high-volume document handling across Android and iOS.",
+        color: "#4ade80",
+        tech: ["Flutter", "Kotlin", "REST API", "JSON Web Tokens", "TLS Encryption"],
+        androidLink: "https://play.google.com/store/apps/details?id=com.etax.icanhan",
+        iosLink: "https://apps.apple.com/vn/app/etax-mobile/id1589750682?l=vi",
+      },
+  {
     title: "Smart Expense – Money Planner",
     category: "company",
     description:
@@ -40,16 +58,7 @@ const projects = [
     tech: ["Flutter", "Dart", "SQLite", "Firebase Sync", "Bloc"],
     iosLink: "https://apps.apple.com/us/app/money-tracker-budget-manager/id6757209828",
   },
-  {
-    title: "ETAX MOBILE",
-    category: "company",
-    description:
-      "Official government tax service application. Optimized for secure RESTful communication and high-volume document handling across Android and iOS.",
-    color: "#4ade80",
-    tech: ["Flutter", "Kotlin", "REST API", "JSON Web Tokens", "TLS Encryption"],
-    androidLink: "https://play.google.com/store/apps/details?id=com.etax.icanhan",
-    iosLink: "https://apps.apple.com/vn/app/etax-mobile/id1589750682?l=vi",
-  },
+
   {
     title: "Coloring Book - Paint & Color Art",
     category: "personal",
@@ -58,6 +67,15 @@ const projects = [
     color: "#fb923c",
     tech: ["Flutter", "Custom Canvas", "Flood Fill Algorithm", "AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
+  },
+{
+    title: "Football Live Score: MatchLive",
+    category: "personal",
+    description:
+      "Live football scores, fixtures, standings, match statistics, and real-time notifications from leagues around the world.",
+    color: "#fb523c",
+    tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
+    androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
   },
   {
     title: "App Lock – Protect Privacy",
@@ -84,7 +102,7 @@ const additionalApps = [
 ];
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState("company");
+  const [activeTab, setActiveTab] = useState("personal");
 
   const filteredProjects = projects.filter(
     (project) => project.category === activeTab
