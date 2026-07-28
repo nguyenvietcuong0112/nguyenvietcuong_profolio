@@ -68,15 +68,15 @@ const projects = [
     tech: ["Flutter", "Custom Canvas", "Flood Fill Algorithm", "AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
   },
-{
-    title: "Football Live Score: MatchLive",
-    category: "personal",
-    description:
-      "Live football scores, fixtures, standings, match statistics, and real-time notifications from leagues around the world.",
-    color: "#fb523c",
-    tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
-    androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
-  },
+// {
+//     title: "Football Live Score: MatchLive",
+//     category: "personal",
+//     description:
+//       "Live football scores, fixtures, standings, match statistics, and real-time notifications from leagues around the world.",
+//     color: "#fb523c",
+//     tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
+//     androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
+//   },
   {
     title: "App Lock – Protect Privacy",
     category: "company",
