@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
-import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-kotlin";
+import "prismjs/components/prism-dart";
 import "@/assets/css/tomorrow.css";
 import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
@@ -57,15 +60,16 @@ const ImpactMetric = ({ label, value, icon, color }) => (
 
 const TechStackBar = () => {
   const stacks = [
-    { name: "Flutter", color: "text-blue-400", icon: "fa-mobile-screen-button" },
+    { name: "Kotlin", color: "text-purple-400", icon: "fa-code" },
+    { name: "Java", color: "text-red-400", icon: "fa-mug-hot" },
+    { name: "Flutter (Dart)", color: "text-cyan-400", icon: "fa-mobile-screen-button" },
     { name: "Android Native", color: "text-green-400", icon: "fa-android" },
-    { name: "React Native", color: "text-cyan-400", icon: "fa-react" },
   ];
 
   return (
-    <div className="flex flex-wrap gap-3 mt-6 animate__animated animate__fadeInUp animate__delay-1s">
+    <div className="flex flex-wrap gap-2.5 mt-6 animate__animated animate__fadeInUp animate__delay-1s">
       {stacks.map((stack) => (
-        <div key={stack.name} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-800/40 border border-gray-700/50 backdrop-blur-sm text-xs font-semibold text-gray-300 hover:text-white hover:border-gray-600 transition-colors cursor-default">
+        <div key={stack.name} className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/60 backdrop-blur-sm text-xs font-semibold text-gray-200 hover:text-white hover:border-gray-500 transition-all cursor-default shadow-sm">
           <i className={`fas ${stack.icon} ${stack.color}`}></i>
           {stack.name}
         </div>
@@ -76,24 +80,29 @@ const TechStackBar = () => {
 
 export default function Hero() {
   const words = [
-    "Android (Java/Kotlin)",
-    "Flutter Developer",
-    "React Native",
-    "ReactJS Enthusiast",
+    "Kotlin & Java Native",
+    "Flutter Cross-Platform",
+    "Monetization SDK Lead",
+    "Android Architect",
   ];
 
-const code = `
-const mobileDeveloper = {
-    name: 'Nguyen Viet Cuong',
-    role: 'Mobile Engineer',
-    specialization: ['Monetization SDKs', 'Modular Architecture'],
-    mastery: {
-        architecture: 'Clean & Scalable',
-        ads_tracking: 'AdMob, Adjust, AppsFlyer',
-        performance: 'Zero-Jank UI & Reliable Systems'
-    },
-    passion: 'Building scalable products with maximum ARPDAU'
-};
+  const code = `
+// Mobile Engineer Core Profile
+class MobileEngineer(
+    val name: String = "Nguyen Viet Cuong",
+    val coreLanguages: List<String> = listOf("Kotlin", "Java", "Dart"),
+    val frameworks: List<String> = listOf("Android Native", "Flutter"),
+    val architecture: String = "Clean Architecture + BLoC/MVVM",
+    val monetization: List<String> = listOf("AdMob", "AppLovin", "Adjust", "AppsFlyer")
+) {
+    fun buildScalableApp(): AppMetrics {
+        return AppMetrics(
+            downloads = "5M+",
+            performance = "60 FPS / Zero-Jank UI",
+            status = "Production Ready 🚀"
+        )
+    }
+}
 `;
 
   useEffect(() => {
@@ -166,13 +175,8 @@ const mobileDeveloper = {
         >
           <div className="absolute inset-0"></div>
 
-          {/* Choose one of these background options */}
+          {/* Grid Background */}
           <GridBackground />
-
-          {/* Or keep the original backgrounds if you prefer */}
-          {/* <HexagonBackground /> */}
-          {/* <AnimatedGrid /> */}
-          {/* <DotBackground /> */}
 
           {/* Meteors Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -202,7 +206,7 @@ const mobileDeveloper = {
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
                 <span className="text-gray-300 text-xs sm:text-sm font-medium">
-                  Welcome to my universe
+                  Mobile Engineer Portfolio
                 </span>
               </div>
 
@@ -223,7 +227,7 @@ const mobileDeveloper = {
 
               {/* Role badge */}
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
-                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                <i className="fas fa-mobile-screen-button text-blue-400 animate-bounce text-sm sm:text-base"></i>
                 <span>
                   <FlipWords
                     className={"text-lg sm:text-xl text-blue-400 font-medium"}
@@ -235,55 +239,24 @@ const mobileDeveloper = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Specializing in building <span className="text-blue-400 font-bold">highly scalable</span> mobile architectures and <span className="text-teal-400 font-bold">high-performance systems</span>. Expert in modular development and optimizing large-scale applications for a seamless user experience. 🚀
+                  Specializing in <span className="text-purple-400 font-bold">Kotlin</span>, <span className="text-red-400 font-bold">Java</span>, and <span className="text-cyan-400 font-bold">Flutter</span>. Experienced in building <span className="text-blue-400 font-bold">high-impact mobile apps</span> reaching <span className="text-emerald-400 font-bold">5M+ downloads</span>, modular architectures, and Monetization SDK integrations. 📱🚀
                 </p>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
-                {/* View Projects Button */}
-{/*                 <a */}
-{/*                   href="" */}
-{/*                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]" */}
-{/*                 > */}
-{/*                    */}{/*                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400"> */}
-{/*                    */}{/*                     <span className="relative flex items-center justify-center gap-2 text-white font-medium"> */}
-{/*                    */}{/*                       <span>Learn More</span> */}
-{/*                    */}{/*                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i> */}
-{/*                    */}{/*                     </span> */}
-{/*                    */}{/*                   </span> */}
-{/*                 </a> */}
-
-                {/* Contact Button */}
-{/*                 <a */}
-{/*                   href={resumePDF} */}
-{/*                   download="cv.nguyenvietcuong.pdf" */}
-{/*                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]" */}
-{/*                 > */}
-{/*                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700"> */}
-{/*                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white"> */}
-{/*                       <span>Get Resume</span> */}
-{/*                       <i className="fas fa-file-download transform transition-all duration-300 group-hover:rotate-12"></i> */}
-{/*                     </span> */}
-{/*                   </span> */}
-{/*                 </a> */}
               </div>
 
               {/* Floating badges */}
               <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
-                <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
-                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI
-                  Magic
+                <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 text-xs font-semibold">
+                  <i className="fab fa-android"></i>&nbsp;&nbsp;Kotlin & Java Native
                 </div>
               </div>
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
-                <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
-                  <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
+                <div className="px-4 py-2 rounded-lg bg-cyan-500/10 backdrop-blur-sm border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
+                  <i className="fas fa-layer-group"></i>&nbsp;&nbsp;Flutter Apps
                 </div>
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
-                <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
-                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
+                <div className="px-4 py-2 rounded-lg bg-emerald-500/10 backdrop-blur-sm border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+                  <i className="fas fa-chart-line"></i>&nbsp;&nbsp;Monetization SDKs
                 </div>
               </div>
             </div>
@@ -293,8 +266,8 @@ const mobileDeveloper = {
               <div className="relative">
                 {/* Impact Metrics Overlay - Top side */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 relative z-20">
-                  <ImpactMetric label="Project Scaling" value="Modular" icon="fa-layer-group" color="text-blue-400" />
-                  <ImpactMetric label="System Efficiency" value="Stable" icon="fa-shield-halved" color="text-emerald-400" />
+                  <ImpactMetric label="Core Tech Stack" value="Kotlin / Java / Flutter" icon="fa-mobile-screen-button" color="text-purple-400" />
+                  <ImpactMetric label="App Downloads" value="5M+ Users" icon="fa-cloud-arrow-down" color="text-emerald-400" />
                 </div>
 
                 <div className="gradient-border relative z-10">
@@ -304,20 +277,20 @@ const mobileDeveloper = {
                       <div className="window-dot bg-yellow-500"></div>
                       <div className="window-dot bg-green-500"></div>
                       <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
-                        <i className="fas fa-terminal"></i>
-                        dev.profile
+                        <i className="fas fa-code"></i>
+                        MobileEngineer.kt
                       </span>
                     </div>
-                    <pre className="language-javascript">
-                      <code className="language-javascript">{code}</code>
+                    <pre className="language-kotlin">
+                      <code className="language-kotlin">{code}</code>
                     </pre>
                   </div>
                 </div>
 
                 {/* Impact Metrics Overlay - Bottom side */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 relative z-20">
-                  <ImpactMetric label="UI Performance" value="Smooth" icon="fa-gauge-high" color="text-yellow-400" />
-                  <ImpactMetric label="Architectural" value="Clean" icon="fa-gem" color="text-purple-400" />
+                  <ImpactMetric label="UI Performance" value="60 FPS Smooth" icon="fa-gauge-high" color="text-yellow-400" />
+                  <ImpactMetric label="Architecture" value="Clean & Modular" icon="fa-gem" color="text-cyan-400" />
                 </div>
 
                 {/* Tech Stack Horizontal Bar */}
@@ -344,3 +317,4 @@ const mobileDeveloper = {
     </>
   );
 }
+

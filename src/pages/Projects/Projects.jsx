@@ -5,6 +5,22 @@ import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Theme App Widget",
+    category: "company",
+    description:
+      "A feature-rich Android home screen personalization application. Allows users to create dynamic custom widgets, custom icon packs, aesthetic wallpapers, and personalized desktop themes.",
+    color: "#ec4899",
+    tech: ["Android", "Kotlin", "App Widgets", "Custom Themes", "AdMob Mediation"],
+  },
+  {
+    title: "Rolling Icons – App Launcher",
+    category: "company",
+    description:
+      "Interactive home screen launcher application featuring real-time physics simulation for rolling app icons, gesture-based controls, and customizable icon particle effects.",
+    color: "#06b6d4",
+    tech: ["Android", "Kotlin", "Custom Canvas", "Physics Engine", "Launcher Services"],
+  },
+  {
     title: "Core Monetization & Tracking SDK",
     category: "company",
     description:
@@ -68,15 +84,15 @@ const projects = [
     tech: ["Flutter", "Custom Canvas", "Flood Fill Algorithm", "AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.fillcolor.coloringbook.paint.colorart",
   },
-// {
-//     title: "Football Live Score: MatchLive",
-//     category: "personal",
-//     description:
-//       "Live football scores, fixtures, standings, match statistics, and real-time notifications from leagues around the world.",
-//     color: "#fb523c",
-//     tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
-//     androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
-//   },
+{
+    title: "Football Live Score: MatchLive",
+    category: "personal",
+    description:
+      "Live football scores, fixtures, standings, match statistics, and real-time notifications from leagues around the world.",
+    color: "#fb523c",
+    tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
+    androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
+  },
   {
     title: "App Lock – Protect Privacy",
     category: "company",
@@ -89,6 +105,8 @@ const projects = [
 ];
 
 const additionalApps = [
+  "Theme App Widget",
+  "Rolling Icons",
   "BloodPressure",
   "Clap Find Phone",
   "Weather",

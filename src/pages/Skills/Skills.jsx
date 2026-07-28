@@ -73,7 +73,8 @@ const SkillsSection = () => {
       skills: [
         { name: "Android Native", icon: <SiAndroid className="w-4 h-4 text-[#3DDC84]" /> },
         { name: "Flutter", icon: <SiFlutter className="w-4 h-4 text-[#02569B]" /> },
-        { name: "React Native", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+        { name: "Theme App Widget", icon: <BsGrid1X2 className="w-4 h-4 text-cyan-400" /> },
+        { name: "Rolling Icons", icon: <MdAnimation className="w-4 h-4 text-purple-400" /> },
       ],
     },
     {

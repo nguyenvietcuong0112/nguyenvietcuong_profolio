@@ -24,24 +24,22 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Cuong, a <span className="text-cyan-400 font-bold">Mobile Engineer</span> with a proven track record of building and scaling mobile applications for global markets reaching <span className="text-cyan-400 font-bold">5M+ downloads</span>.
+                Hello! I'm Cuong, a <span className="text-cyan-400 font-bold">Mobile Engineer</span> specializing in <span className="text-purple-400 font-bold">Kotlin</span>, <span className="text-red-400 font-bold">Java</span>, and <span className="text-cyan-400 font-bold">Flutter</span>. I have a proven track record of building and scaling high-performance mobile applications reaching <span className="text-cyan-400 font-bold">5M+ downloads</span> across global markets.
               </p>
 
               <p className="text-white">
-                I specialize in high-impact mobile solutions with a strong focus on <span className="font-bold border-b-2 border-blue-500/50">Monetization & Analytics SDK Development</span>. I have extensive experience building centralized libraries that seamlessly integrate AdMob, AppLovin, AppsFlyer, and Adjust. My expertise lies in optimizing eCPM, ARPDAU, and ROAS through robust ad-loading strategies, precise event tracking, and data-driven A/B testing.
+                My primary focus lies in Native Android (<span className="text-purple-400 font-semibold">Kotlin & Java</span>) and cross-platform development with <span className="text-cyan-400 font-semibold">Flutter</span>, paired with deep expertise in <span className="font-bold border-b-2 border-blue-500/50">Monetization & Analytics SDK Integration</span>. I've designed and built centralized libraries integrating AdMob, AppLovin, AppsFlyer, and Adjust—optimizing eCPM, ARPDAU, and ROAS through data-driven ad architecture and precise event tracking.
               </p>
 
               <p className="text-white">
-                I am passionate about building products with measurable impact and sustainable growth, transforming technical complexity into seamless user experiences that scale to millions.
+                I am passionate about building products with measurable business impact, transforming technical complexity into smooth 60 FPS mobile user experiences.
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    I'm a lifelong learner and mobile engineer, driven by a passion for
-                    building impactful applications and improving development workflows.
-                    Through Flutter and native Android, I aim to create robust systems and
-                    seamless user experiences that scale.
+                    Driven by a passion for clean architecture and robust mobile systems.
+                    Leveraging Kotlin, Java, and Flutter to create high-performing apps that scale seamlessly to millions of users.
                   </p>
 
                   <div className="mt-6 space-y-3">
@@ -49,9 +47,8 @@ export default function About() {
                       Cuong, Mobile Engineer
                     </cite>
                     <div className="flex items-center gap-2">
-                      {/* Optional: replace with your app logo */}
                       <span className="text-white">
-                        Building mobile products with Flutter & Android
+                        Building mobile products with Kotlin, Java & Flutter
                       </span>
                     </div>
                   </div>
