@@ -5,28 +5,24 @@ import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Theme App Widget",
-    category: "company",
-    description:
-      "A feature-rich Android home screen personalization application. Allows users to create dynamic custom widgets, custom icon packs, aesthetic wallpapers, and personalized desktop themes.",
-    color: "#ec4899",
-    tech: ["Android", "Kotlin", "App Widgets", "Custom Themes", "AdMob Mediation"],
-  },
-  {
     title: "Rolling Icons – App Launcher",
     category: "company",
     description:
       "Interactive home screen launcher application featuring real-time physics simulation for rolling app icons, gesture-based controls, and customizable icon particle effects.",
     color: "#06b6d4",
     tech: ["Android", "Kotlin", "Custom Canvas", "Physics Engine", "Launcher Services"],
+    androidLink: "https://play.google.com/store/apps/details?id=com.iconchanger.wallpaper.rolling.icons",
+
   },
   {
-    title: "Core Monetization & Tracking SDK",
+    title: "Learn Piano: Play Songs",
     category: "company",
-    description:
-      "A proprietary centralized Android/Unity SDK built to unify AdMob, AppLovin MAX, Adjust, AppsFlyer, and Firebase. Integrated across 30+ applications, it manages complex ad bidding, waterfall strategies, UMP consent, and precise event postbacks to maximize ARPDAU and ensure accurate ROAS tracking.",
-    color: "#a855f7",
-    tech: ["Android AAR", "Unity Bridge", "AdMob/MAX", "AppsFlyer/Adjust", "Analytics"],
+   description:
+     "A Flutter-based interactive piano learning app that provides a virtual piano keyboard with song-based lessons, adjustable difficulty and playback speed, performance recording and scoring, practice history, customizable piano themes, and multiple instrument sounds. Designed to deliver an engaging and responsive learning experience for users of all skill levels.",
+   color: "#a855f7",
+   tech: ["Flutter", "Dart", "Riverpod", "GoRouter", "Audio/MIDI", "Firebase"],
+    androidLink: "https://play.google.com/store/apps/details?id=com.pianokeyboard.virtualpiano.learnpiano",
+
   },
     {
         title: "ETAX MOBILE",
@@ -93,6 +89,14 @@ const projects = [
     tech: ["Android", "Kotlin", "REST API","MVVM","AdMob Mediation", "Billing API"],
     androidLink: "https://play.google.com/store/apps/details?id=com.livescore.football.livescores.footballscores",
   },
+{
+    title: "Theme App Widget",
+    category: "personal",
+    description:
+      "A feature-rich Android home screen personalization application. Allows users to create dynamic custom widgets, custom icon packs, aesthetic wallpapers, and personalized desktop themes.",
+    color: "#ec4899",
+    tech: ["Android", "Kotlin", "App Widgets", "Custom Themes", "AdMob Mediation"],
+  },
   {
     title: "App Lock – Protect Privacy",
     category: "company",
@@ -150,10 +154,10 @@ export default function Projects() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16"
         >
           {[
-            { label: "Total Downloads", value: "30M+", sub: "Across global markets" },
+            { label: "Total Downloads", value: "50M+", sub: "Across global markets" },
             { label: "Products", value: "30+", sub: "Published on Play Store" },
             { label: "Avg Rating", value: "4.0+", sub: "High user satisfaction" },
-            { label: "Crash Rate", value: "< 1%", sub: "High app stability" },
+            { label: "Crash Rate", value: "< 0.5%", sub: "High app stability" },
           ].map((stat, index) => (
             <div key={index} className="bg-zinc-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-colors duration-300">
               <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400 mb-1">

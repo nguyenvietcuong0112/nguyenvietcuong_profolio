@@ -239,7 +239,10 @@ class MobileEngineer(
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Specializing in <span className="text-purple-400 font-bold">Kotlin</span>, <span className="text-red-400 font-bold">Java</span>, and <span className="text-cyan-400 font-bold">Flutter</span>. Experienced in building <span className="text-blue-400 font-bold">high-impact mobile apps</span> reaching <span className="text-emerald-400 font-bold">5M+ downloads</span>, modular architectures, and Monetization SDK integrations. 📱🚀
+                  Specializing in <span className="text-purple-400 font-bold">Kotlin</span>, <span className="text-red-400 font-bold">Java</span>, and <span className="text-cyan-400 font-bold">Flutter</span>, with experience designing and leading <span className="text-blue-400 font-bold">scalable mobile architectures</span>, monetization systems, and high-performance mobile applications across <span className="text-emerald-400 font-bold">30+ products</span> with <span className="text-emerald-400 font-bold">5M+ downloads</span>. 📱🚀
+                </p>
+                <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed mt-4">
+                  Focused on technical ownership, <span className="text-cyan-400 font-bold">SDK architecture</span>, <span className="text-purple-400 font-bold">AdMob & mediation</span>, <span className="text-red-400 font-bold">AppsFlyer/Adjust</span> attribution, analytics, and revenue optimization. Experienced in turning complex monetization requirements into reliable, reusable solutions that improve <span className="text-blue-400 font-bold">ARPDAU</span>, <span className="text-blue-400 font-bold">ROAS accuracy</span>, and overall app performance.
                 </p>
               </div>
 
@@ -287,11 +290,11 @@ class MobileEngineer(
                   </div>
                 </div>
 
-                {/* Impact Metrics Overlay - Bottom side */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 relative z-20">
-                  <ImpactMetric label="UI Performance" value="60 FPS Smooth" icon="fa-gauge-high" color="text-yellow-400" />
-                  <ImpactMetric label="Architecture" value="Clean & Modular" icon="fa-gem" color="text-cyan-400" />
-                </div>
+{/*                  */}{/* Impact Metrics Overlay - Bottom side */}
+{/*                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 relative z-20"> */}
+{/*                   <ImpactMetric label="UI Performance" value="60 FPS Smooth" icon="fa-gauge-high" color="text-yellow-400" /> */}
+{/*                   <ImpactMetric label="Architecture" value="Clean & Modular" icon="fa-gem" color="text-cyan-400" /> */}
+{/*                 </div> */}
 
                 {/* Tech Stack Horizontal Bar */}
                 <TechStackBar />
